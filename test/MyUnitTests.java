@@ -6,7 +6,7 @@ public class MyUnitTests {
 	
 	@Test
 	public void firstTest() {
-		Assert.fail("We want CI to fail here");
+		Assert.assertEquals(2 + 2, 4);
 	}
 
 }

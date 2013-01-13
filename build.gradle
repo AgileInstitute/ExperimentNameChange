@@ -1,0 +1,15 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+defaultTasks 'intro'
+
+dependencies {
+	testCompile group: 'junit', name: 'junit', version: '4.+'
+}
+
+task intro << {
+	printLn 'Gradle build script running...'
+}
+
+task myNonsense(dependsOn: intro) << {
+}

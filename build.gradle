@@ -1,11 +1,11 @@
 apply plugin: 'java'
-apply plugin: 'eclipse'
 
-defaultTasks 'intro'
-
-task intro << {
-	printLn 'Gradle build script running...'
+repositories {
+    flatDir {
+        dirs 'lib'
+    }
 }
 
-task myNonsense(dependsOn: intro) << {
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.+'
 }
